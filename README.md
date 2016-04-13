@@ -19,8 +19,7 @@ composer require jolitagrazyte/laravel-discogs
 ## Usage
 
 ``` php
-$disocgs = new Jolita\LaravelDiscogs();
-echo $skeleton->echoPhrase('Hello, Spatie!');
+...
 ```
 
 ## Changelog
