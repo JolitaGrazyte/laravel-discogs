@@ -2,7 +2,9 @@
 
 namespace Spatie\Skeleton\Test;
 
-class ExampleTest extends \PHPUnit_Framework_TestCase
+use Jolita\LaravelDiscogs\Test\TestCase;
+
+class DiscogsTest extends TestCase
 {
     /** @test */
     public function true_is_true()

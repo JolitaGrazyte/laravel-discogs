@@ -1,16 +1,11 @@
 <?php
 
-namespace Spatie\Skeleton;
+namespace Jolita\LaravelDiscogs;
 
-class SkeletonClass
+use Jolita\DiscogsApiWrapper\DiscogsApi;
+
+class Discogs extends DiscogsApi
 {
-    /**
-     * Create a new Skeleton Instance
-     */
-    public function __construct()
-    {
-        // constructor body
-    }
 
     /**
      * Friendly welcome
