@@ -76,21 +76,33 @@ Optionally get()-method may be also used.
 ### Endpoints with no authentication required
 
 ``` php
-// Get artist whith id 1.
-$artist = Discogs::artist(1);
+// Get artist where id is 1.
+$artist = Discogs::artist('1');
 
-// Request all the relases of the artist whith id 1.   
-$artistRelease = Discogs::artistRelease(1);
+// Request all the relases of the artist where id is 1.   
+$artistRelease = Discogs::artistRelease('1');
 
-// Get label whith id 1.
-$label = Discogs::label(1);
+// Get label where id is 1.
+$label = Discogs::label('1');
 
-// Request all the relases of the label whith id 1.
-$labelRelease = Discogs::labelRelease(1);
+// Request all the relases of the label where id is 1.
+$labelRelease = Discogs::labelRelease('1');
 
-// Get relase whith id 1.
-$release = Discogs::release(1);
+// Get relase where id is 1.
+$release = Discogs::release('1');
 
+
+getMarketplaceListing(string $id)
+getUsersInventory(string $userName)
+```
+
+### Endpoints where authentication is required
+
+```php
+$searchResult = Discogs::search('MoWax');
+$myOrders = Discogs::getMyOrders();
+$order = Discogs::orderWithId(string $id);
+$orderMessages = Discogs::orderMessages(string $orderId)
 ```
 
 ## Changelog

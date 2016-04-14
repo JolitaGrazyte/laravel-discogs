@@ -15,14 +15,6 @@ class DiscogsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/laravel-discogs.php' => config_path('laravel-discogs.php'),
         ], 'config');
-
-        /*
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'skeleton');
-
-        $this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/skeleton'),
-        ], 'views');
-        */
     }
 
     /**
