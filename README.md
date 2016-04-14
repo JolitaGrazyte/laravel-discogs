@@ -38,10 +38,11 @@ This package also comes with a facade, which provides an easy way to call the th
     'Discogs' => Jolita\LaravelDiscogs\DiscogsFacade::class,
     ...
 ];
+```
 
 Next up, you must publish the config file of this package with this command:
 
-```
+``` php
 php artisan vendor:publish --provider="Jolita\LaravelDiscogs\DiscogsServiceProvider"
 ```
 
@@ -49,10 +50,10 @@ The following config file will be published in config/laravel-discogs.php
 Some of the endpoints require authentication. 
 If you want to use one those you must set your token.
 
-```
-/**
+``` php
+
+/*
  * Token is your discogs token that you can get on https://www.discogs.com/settings/developers page.
- *
  * User-Agent is a name of your application, for example 'MyAmazingDiscogsApp/1.0'.
  *
  */
@@ -62,8 +63,9 @@ return [
         'User-Agent' => '',
     ],
 ];
-
 ```
+
+
 
 ## Usage
 
