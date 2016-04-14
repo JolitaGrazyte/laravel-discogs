@@ -7,7 +7,7 @@
  *
  */
 return [
-    'token' => '',
+    'token' => env('DISCOGS_TOKEN', ''),
     'headers' => [
         'User-Agent' => '',
     ],

@@ -16,6 +16,55 @@ You can install the package via composer:
 composer require jolitagrazyte/laravel-discogs
 ```
 
+## Post-installation
+
+You must set the service provider of this package in your application file.
+
+``` php
+// config/app.php
+'provider' => [
+    ...
+    Jolita\LaravelDiscogs\DiscogsServiceProvider::class,
+    ...
+];
+```
+
+This package also comes with a facade, which provides an easy way to call the the class. 
+
+``` php
+// config/app.php
+'aliases' => [
+    ...
+    'Discogs' => Jolita\LaravelDiscogs\DiscogsFacade::class,
+    ...
+];
+
+Next up, you must publish the config file of this package with this command:
+
+```
+php artisan vendor:publish --provider="Jolita\LaravelDiscogs\DiscogsServiceProvider"
+```
+
+The following config file will be published in config/laravel-discogs.php
+Some of the endpoints require authentication. 
+If you want to use one those you must set your token.
+
+```
+/**
+ * Token is your discogs token that you can get on https://www.discogs.com/settings/developers page.
+ *
+ * User-Agent is a name of your application, for example 'MyAmazingDiscogsApp/1.0'.
+ *
+ */
+return [
+    'token' => env('DISCOGS_TOKEN', ''),
+    'headers' => [
+        'User-Agent' => '',
+    ],
+];
+
+```
+
 ## Usage
 
 ``` php
