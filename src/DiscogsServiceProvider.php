@@ -30,7 +30,7 @@ class DiscogsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/laravel-disocgs.php', 'laravel-discogs');
+        $this->mergeConfigFrom(__DIR__ . '/../config/laravel-discogs.php', 'laravel-discogs');
 
         $this->app->singleton('discogs', function () {
 
