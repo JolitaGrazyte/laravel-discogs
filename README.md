@@ -69,7 +69,7 @@ return [
 
 ## Usage
 
-Ussage of this package is really simple. 
+Usage of this package is really simple. 
 For the most of the endpoints there is a method.
 Optionally get()-method may be also used. 
 
