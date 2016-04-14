@@ -69,8 +69,28 @@ return [
 
 ## Usage
 
+Ussage of this package is really simple. 
+For the most of the endpoints there is a method.
+Optionally get()-method may be also used. 
+
+### Endpoints with no authentication required
+
 ``` php
-...
+// Get artist whith id 1.
+$artist = Discogs::artist(1);
+
+// Request all the relases of the artist whith id 1.   
+$artistRelease = Discogs::artistRelease(1);
+
+// Get label whith id 1.
+$label = Discogs::label(1);
+
+// Request all the relases of the label whith id 1.
+$labelRelease = Discogs::labelRelease(1);
+
+// Get relase whith id 1.
+$release = Discogs::release(1);
+
 ```
 
 ## Changelog
