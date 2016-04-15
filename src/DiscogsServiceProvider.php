@@ -29,9 +29,8 @@ class DiscogsServiceProvider extends ServiceProvider
 
             $config = config('laravel-discogs');
 
-            return new DiscogsApi(Client::class, $config['token'], $config['headers']['User-Agent']);
+            return new DiscogsApi(app(Client::class), $config['token'], $config['headers']['User-Agent']);
         });
-
 
         $this->app->bind(
             'discogs',
