@@ -4,6 +4,7 @@ namespace Jolita\LaravelDiscogs;
 
 use Illuminate\Support\ServiceProvider;
 use Jolita\DiscogsApiWrapper\DiscogsApi;
+use GuzzleHttp\Client;
 
 class DiscogsServiceProvider extends ServiceProvider
 {
@@ -28,8 +29,9 @@ class DiscogsServiceProvider extends ServiceProvider
 
             $config = config('laravel-discogs');
 
-            return new DiscogsApi($config['token'], $config['headers']['User-Agent']);
+            return new DiscogsApi(Client::class, $config['token'], $config['headers']['User-Agent']);
         });
+
 
         $this->app->bind(
             'discogs',

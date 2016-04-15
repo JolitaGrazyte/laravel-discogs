@@ -2,9 +2,10 @@
 
 namespace Jolita\LaravelDiscogs\Test;
 
+use Orchestra\Testbench\TestCase as Orchestra;
 use Jolita\LaravelDiscogs\DiscogsServiceProvider;
 
-abstract class TestCase extends \Orchestra\Testbench\TestCase
+abstract class TestCase extends Orchestra
 {
     public function setUp()
     {

@@ -3,7 +3,7 @@
 /**
  * Token is your discogs token that you can get on https://www.discogs.com/settings/developers page.
  *
- * User-Agent is a name of your application, for example 'MyAmazingDiscogsApp/1.0'
+ * User-Agent is a name of your application, for example 'MyDiscogsClient/1.0 +http://mydiscogsclient.org'
  */
 return [
     'token' => env('DISCOGS_TOKEN', ''),

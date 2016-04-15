@@ -7,7 +7,7 @@ use Jolita\LaravelDiscogs\Test\TestCase;
 class ExampleTest extends TestCase
 {
     /** @test */
-    public function true_is_true()
+    public function it_can_get_artist_by_id()
     {
         $this->assertTrue(true);
     }

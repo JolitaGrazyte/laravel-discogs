@@ -53,7 +53,7 @@ If you want to use one those you must set your token.
 ``` php
 
 /*
- * Token is your discogs token that you can get on https://www.discogs.com/settings/developers page.
+ * Token is your discogs token that you can obtain on https://www.discogs.com/settings/developers page.
  * User-Agent is a name of your application, for example 'MyAmazingDiscogsApp/1.0'.
  *
  */
@@ -98,11 +98,19 @@ getUsersInventory(string $userName)
 
 ### Endpoints where authentication is required
 
+#### Orders 
 ```php
-$searchResult = Discogs::search('MoWax');
 $myOrders = Discogs::getMyOrders();
 $order = Discogs::orderWithId(string $id);
 $orderMessages = Discogs::orderMessages(string $orderId)
+```
+
+#### Search
+
+```php
+$searchParameters = new SearchParameters();
+$searchParameters->type('label')->format('lp')->year('1996');
+$searchResult = Discogs::search('MoWax', $searchParameters);
 ```
 
 ## Changelog
