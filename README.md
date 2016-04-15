@@ -70,8 +70,10 @@ return [
 ## Usage
 
 Usage of this package is really simple. 
+
 For the most of the endpoints there is a method.
-Optionally get()-method may be also used. 
+
+Optionally you can also use the get()-method.
 
 ### Endpoints with no authentication required
 
