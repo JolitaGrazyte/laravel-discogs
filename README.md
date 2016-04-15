@@ -47,7 +47,9 @@ php artisan vendor:publish --provider="Jolita\LaravelDiscogs\DiscogsServiceProvi
 ```
 
 The following config file will be published in config/laravel-discogs.php
+
 Some of the endpoints require authentication. 
+
 If you want to use one those you must set your token.
 
 ``` php
