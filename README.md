@@ -105,8 +105,8 @@ getUsersInventory('username')
 #### Orders 
 ```php
 $myOrders = Discogs::getMyOrders();
-$order = Discogs::orderWithId(string $id);
-$orderMessages = Discogs::orderMessages(string $orderId)
+$order = Discogs::orderWithId('1234');
+$orderMessages = Discogs::orderMessages('1234')
 ```
 
 #### Search
