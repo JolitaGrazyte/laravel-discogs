@@ -47,7 +47,9 @@ php artisan vendor:publish --provider="Jolita\LaravelDiscogs\DiscogsServiceProvi
 ```
 
 The following config file will be published in config/laravel-discogs.php
+
 Some of the endpoints require authentication. 
+
 If you want to use one those you must set your token.
 
 ``` php
@@ -70,8 +72,10 @@ return [
 ## Usage
 
 Usage of this package is really simple. 
+
 For the most of the endpoints there is a method.
-Optionally get()-method may be also used. 
+
+Optionally you can also use the get()-method.
 
 ### Endpoints with no authentication required
 
