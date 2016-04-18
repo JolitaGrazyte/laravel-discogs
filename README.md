@@ -94,16 +94,16 @@ $labelRelease = Discogs::labelRelease('1');
 $release = Discogs::release('1');
 
 // Get listing where id is 1234.
-getMarketplaceListing('1234')
+$listing = Discogs::getMarketplaceListing('1234')
 
 ```
 #### Inventory not authenticated
+
+If you are not authenticated as the inventory owner, only items that have a status of For Sale will be visible.
+
 ```php
-/** If you are not authenticated as the inventory owner, 
-* only items that have a status of For Sale will be visible.
-*/
 // Get inventory where username is username.
-getUsersInventory('username')
+$inventory = Discogs::getUsersInventory('username')
 ```
 
 ### Endpoints where authentication is required
@@ -145,7 +145,7 @@ As the inventory owner you will get additional weight, format_quantity, external
 
 ```php
 // Get inventory where username is username.
-getUsersInventory('username')
+$inventory = Discogs::getUsersInventory('username')
 ```
 
 ## Changelog
