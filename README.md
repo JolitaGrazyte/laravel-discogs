@@ -1,4 +1,4 @@
-# An easy to use Laravel-Discogs package.
+# A easy to use Laravel-Discogs package.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jolitagrazyte/laravel-discogs.svg?style=flat-square)](https://packagist.org/packages/jolitagrazyte/laravel-discogs)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -96,8 +96,8 @@ $labelRelease = Discogs::labelRelease('1');
 $release = Discogs::release('1');
 
 
-getMarketplaceListing(string $id)
-getUsersInventory(string $userName)
+getMarketplaceListing('1234')
+getUsersInventory('username')
 ```
 
 ### Endpoints where authentication is required
@@ -110,6 +110,9 @@ $orderMessages = Discogs::orderMessages(string $orderId)
 ```
 
 #### Search
+
+If you want to add some extra search parameters you can do it by first creating a SearchParameters object
+and then chaining as many options as you want.
 
 ```php
 $searchParameters = new SearchParameters();
