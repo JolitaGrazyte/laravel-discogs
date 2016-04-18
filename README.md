@@ -141,6 +141,7 @@ $searchResult = Discogs::search('MoWax', $searchParameters);
 #### Inventory
 
 When requesting your own inventory you also must authenticate. 
+
 As the inventory owner you will get additional weight, format_quantity, external_id, and location keys.
 
 ```php
