@@ -96,18 +96,29 @@ $release = Discogs::release('1');
 // Get listing where id is 1234.
 getMarketplaceListing('1234')
 
+```
+#### Inventory not authenticated
+```php
+/** If you are not authenticated as the inventory owner, 
+* only items that have a status of For Sale will be visible.
+*/
 // Get inventory where username is username.
-// If you are not authenticated as the inventory owner, only items that have a status of For Sale will be visible.
 getUsersInventory('username')
 ```
 
 ### Endpoints where authentication is required
 
+For the endpoints where authentication is required you must make sure that you have a token placed in your .env file or straight in the configuration file: config/laravel-discogs.php .
+
 #### Orders 
 
 ```php
 $myOrders = Discogs::getMyOrders();
+
+// Get order with id 1234
 $order = Discogs::orderWithId('1234');
+
+// Get messages of the order with id 1234
 $orderMessages = Discogs::orderMessages('1234')
 ```
 
@@ -117,14 +128,19 @@ If you want to add some extra search parameters you can do it by first creating 
 and then chaining as many options as you want.
 
 ```php
+// create a SearchParameters object
 $searchParameters = new SearchParameters();
+
+//chain some search paramater
 $searchParameters->type('label')->format('lp')->year('1996');
+
+//do a search request with query = 'MoWax' and passing the SearchParameters object
 $searchResult = Discogs::search('MoWax', $searchParameters);
 ```
 
 #### Inventory
 
-When requesting your own inventory you must authenticate.
+When requesting your own inventory you also must authenticate. 
 As the inventory owner you will get additional weight, format_quantity, external_id, and location keys.
 
 ```php
