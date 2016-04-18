@@ -67,8 +67,6 @@ return [
 ];
 ```
 
-
-
 ## Usage
 
 Usage of this package is really simple. 
@@ -95,14 +93,18 @@ $labelRelease = Discogs::labelRelease('1');
 // Get relase where id is 1.
 $release = Discogs::release('1');
 
-
+// Get listing where id is 1234.
 getMarketplaceListing('1234')
+
+// Get inventory where username is username.
+// If you are not authenticated as the inventory owner, only items that have a status of For Sale will be visible.
 getUsersInventory('username')
 ```
 
 ### Endpoints where authentication is required
 
 #### Orders 
+
 ```php
 $myOrders = Discogs::getMyOrders();
 $order = Discogs::orderWithId('1234');
@@ -118,6 +120,16 @@ and then chaining as many options as you want.
 $searchParameters = new SearchParameters();
 $searchParameters->type('label')->format('lp')->year('1996');
 $searchResult = Discogs::search('MoWax', $searchParameters);
+```
+
+#### Inventory
+
+When requesting your own inventory you must authenticate.
+As the inventory owner you will get additional weight, format_quantity, external_id, and location keys.
+
+```php
+// Get inventory where username is username.
+getUsersInventory('username')
 ```
 
 ## Changelog
