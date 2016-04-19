@@ -25,20 +25,12 @@ class DiscogsServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-discogs.php', 'laravel-discogs');
 
-//        $this->app->singleton('discogs', function () {
-//
-//            $config = config('laravel-discogs');
-//
-//            return new DiscogsApi(app(Client::class), $config['token'], $config['headers']['User-Agent']);
-//        });
+        $this->app->singleton('discogs', function () {
 
-        $config = config('laravel-discogs');
-        $arguments = [app(Client::class), $config['token'], $config['headers']['User-Agent']];
-        app(DiscogsApi::class, $arguments);
+            $config = config('laravel-discogs');
 
-        $this->app->bind(
-            'discogs',
-            DiscogsApi::class
-        );
+            return new DiscogsApi(app(Client::class), $config['token'], $config['headers']['User-Agent']);
+        });
+
     }
 }

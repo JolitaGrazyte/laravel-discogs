@@ -3,10 +3,9 @@
 namespace Jolita\LaravelDiscogs;
 
 use Illuminate\Support\Facades\Facade;
+use Jolita\DiscogsApiWrapper\DiscogsApi;
 
-/**
- * @see \Spatie\Skeleton\SkeletonClass
- */
+
 class DiscogsFacade extends Facade
 {
     /**
@@ -16,6 +15,6 @@ class DiscogsFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'discogs';
+        return DiscogsApi::class;
     }
 }
