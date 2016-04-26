@@ -15,6 +15,6 @@ class DiscogsFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return DiscogsApi::class;
+        return 'discogs';
     }
 }
