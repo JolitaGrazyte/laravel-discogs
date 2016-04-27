@@ -3,8 +3,6 @@
 namespace Jolita\LaravelDiscogs;
 
 use Illuminate\Support\Facades\Facade;
-use Jolita\DiscogsApiWrapper\DiscogsApi;
-
 
 class DiscogsFacade extends Facade
 {

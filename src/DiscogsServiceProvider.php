@@ -3,7 +3,7 @@
 namespace Jolita\LaravelDiscogs;
 
 use Illuminate\Support\ServiceProvider;
-use Jolita\DiscogsApiWrapper\DiscogsApi;
+use Jolita\DiscogsApi\DiscogsApi;
 use GuzzleHttp\Client;
 
 class DiscogsServiceProvider extends ServiceProvider
