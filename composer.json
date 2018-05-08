@@ -16,7 +16,7 @@
     ],
     "require": {
         "php" : "^7.1.3",
-        "jolitagrazyte/discogs-api":"dev-master"
+        "jolitagrazyte/discogs-api":"0.1-alpha"
     },
     "require-dev": {
         "phpunit/phpunit": "^7",
