@@ -9,18 +9,18 @@
     "authors": [
         {
             "name": "JolitaGrazyte",
-            "email": "hello@jolitagrazyte.com",
-            "homepage": "http://jolitagrazyte.com",
+            "email": "hello@jolitagraze.com",
+            "homepage": "http://jolitagraze.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php" : "^7.0",
+        "php" : "^7.1",
         "jolitagrazyte/discogs-api":"dev-master"
     },
     "require-dev": {
-        "phpunit/phpunit": "5.*",
-        "orchestra/testbench": "^3.2"
+        "phpunit/phpunit": "^7",
+        "orchestra/testbench": "^3.6"
     },
     "autoload": {
         "psr-4": {
